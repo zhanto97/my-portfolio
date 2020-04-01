@@ -7,14 +7,14 @@ const navigation = (props) => {
     return (
         <div className={styles.Navigation}>
             <div className={styles.Logo}>
-                <Item>Zhantore</Item>
+                <Item link="/">Zhantore Orynbassarov</Item>
             </div>
 
             <div className={styles.Items}>
                 <ul>
-                    <li><Item>About me</Item></li>
-                    <li><Item>Blog</Item></li>
-                    <li><Item>Projects</Item></li>
+                    <li><Item link="about">About me</Item></li>
+                    <li><Item link="blog">Blog</Item></li>
+                    <li><Item link="projects">Projects</Item></li>
                 </ul>
             </div>
         </div>

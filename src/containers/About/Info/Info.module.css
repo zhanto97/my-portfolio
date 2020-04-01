@@ -1,0 +1,10 @@
+.Info {
+    display: inline-block;
+    /* Adjust padding with media queries for smaller screen size */
+    padding: 100px;
+    width: 60%;
+}
+
+.Info p {
+    font-size: 25px;
+}

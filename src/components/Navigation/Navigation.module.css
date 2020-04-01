@@ -4,33 +4,26 @@
     overflow: hidden;
     position: sticky;
     top: 0;
-    background-color: yellow;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-}
-
-.Navigation::after {
-    content: '';
-    display: table;
-    clear: both;
 }
 
 .Logo {
     display: inline-block;
     vertical-align: middle;
-    height: auto;
+    /* Adjust margin-left with media queries for smaller screen sizes */
+    margin-left: 150px;
 }
 
 .Items {
     display: inline-block;
     vertical-align: middle;
+    float: right;
+    /* Adjust margin-right with media queries for smaller screen sizes */
+    margin-right: 200px; 
 }
 
 .Items ul {
     margin: 0;
     padding: 0;
-    align-items: center;
 }
 
 .Items li {
