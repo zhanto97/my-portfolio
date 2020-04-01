@@ -1,0 +1,16 @@
+.Item a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13;
+    letter-spacing: 2px;
+    background-color: brown;
+}
+
+.Item a:hover {
+    color: #e6ae48;
+}
