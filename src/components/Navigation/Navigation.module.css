@@ -1,15 +1,19 @@
+/* TODO: some adjustments to different media */
+
 .Navigation {
     margin: 0;
     padding: 0;
     overflow: hidden;
     position: sticky;
     top: 0;
+    background-color: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
 }
 
 .Logo {
     display: inline-block;
     vertical-align: middle;
-    /* Adjust margin-left with media queries for smaller screen sizes */
     margin-left: 150px;
 }
 
@@ -17,7 +21,6 @@
     display: inline-block;
     vertical-align: middle;
     float: right;
-    /* Adjust margin-right with media queries for smaller screen sizes */
     margin-right: 200px; 
 }
 
@@ -29,4 +32,24 @@
 .Items li {
     float: left;
     list-style-type: none;
+}
+
+@media (max-width: 1300px) {
+    .Logo {
+        margin-left: 50px;
+    }
+    
+    .Items {
+        margin-right: 150px; 
+    }
+}
+
+@media (max-width: 1000px) {
+    .Logo {
+        margin-left: 0px;
+    }
+    
+    .Items {
+        margin-right: 0px; 
+    }
 }

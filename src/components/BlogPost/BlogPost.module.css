@@ -1,0 +1,9 @@
+.BlogPost {
+    display: block;
+    width: 40%;
+    max-width: 40%;
+    padding: 22px 22px 0px 22px;
+    margin: 30px;
+    text-align: justify;
+    font-size: 20px;
+}

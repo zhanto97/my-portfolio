@@ -1,5 +1,5 @@
 import React from 'react';
-import  {BrowserRouter, Route} from 'react-router-dom'
+import  {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import Navigation from './components/Navigation/Navigation'
 import About from './containers/About/About'
@@ -12,8 +12,11 @@ function App() {
       <div className={styles.App}>
         <Navigation />
         {/* <Route path="/" exact component={About}></Route> */}
-        <Route path="/about" exact component={About}></Route>
-        <Route path="/blog" exact component={Blog}></Route>
+        <Switch>
+          <Route path="/about" exact component={About}></Route>
+          <Route path="/blog/:id" component={Blog}></Route>
+          <Route path="/blog" component={Blog}></Route>
+        </Switch>
       </div>
     </BrowserRouter>
   );

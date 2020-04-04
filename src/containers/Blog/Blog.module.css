@@ -1,4 +1,6 @@
 .Blog {
-    /* display: inline-block; */
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

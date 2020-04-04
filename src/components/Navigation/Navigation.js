@@ -12,9 +12,9 @@ const navigation = (props) => {
 
             <div className={styles.Items}>
                 <ul>
-                    <li><Item link="about">About me</Item></li>
-                    <li><Item link="blog">Blog</Item></li>
-                    <li><Item link="projects">Projects</Item></li>
+                    <li><Item link="/about">About me</Item></li>
+                    <li><Item link="/blog">Blog</Item></li>
+                    <li><Item link="/projects">Projects</Item></li>
                 </ul>
             </div>
         </div>
