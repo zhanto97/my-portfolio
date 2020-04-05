@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import Markdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown'
 
 import Preview from '../../components/Preview/Preview'
 import BlogPost from '../../components/BlogPost/BlogPost'
+import CodeBlock from './Renderers/CodeBlock'
+import InlineCode from './Renderers/InlineCode'
+import Link from './Renderers/Link'
 import styles from './Blog.module.css'
 
 const posts = {};
@@ -38,7 +41,11 @@ const Blog = (props) => {
     if (selected !== -1){
         return (
             <div className={styles.Blog}>
-                <BlogPost><Markdown source={md[selected]}></Markdown></BlogPost>
+                <BlogPost>
+                    <ReactMarkdown 
+                        source={md[selected]}
+                        renderers={{ code: CodeBlock, inlineCode: InlineCode, link: Link}}/>
+                </BlogPost>
             </div>
         )
     }
@@ -49,7 +56,7 @@ const Blog = (props) => {
                     key={index}
                     link={props.match.url + '/' + index}
                     clicked={() => postClickHandler(index)}>
-                        <Markdown source={post}></Markdown>
+                        <ReactMarkdown source={post} renderers={{ code: CodeBlock }}></ReactMarkdown>
                 </Preview>)
             }
         </div>

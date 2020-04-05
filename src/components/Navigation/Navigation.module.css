@@ -9,6 +9,7 @@
     background-color: inherit;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 4px;
+    z-index: 1000;
 }
 
 .Logo {
