@@ -32,6 +32,16 @@ const Blog = (props) => {
         if (props.match.url === '/blog'){
             setSelected(-1)
         }
+        else if (props.match.url.startsWith('/blog/')){
+            const index = props.match.url.lastIndexOf('/')
+            const blogNumber = parseInt(props.match.url.substring(index + 1))
+            if (!isNaN(blogNumber)){
+                setSelected(blogNumber)
+            }
+            else{
+                setSelected(-1)
+            }
+        }
     }, [props.match.url])
 
     const postClickHandler = (id) => {

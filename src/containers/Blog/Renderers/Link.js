@@ -5,7 +5,6 @@ const Link = (props) => {
         textDecoration: 'none',
         color: '#0366d6'
     }
-    console.log(props)
     return (
         <a href={props.href} style={customStyle}>
             {props.children}

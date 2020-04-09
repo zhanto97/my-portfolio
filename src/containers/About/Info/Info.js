@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './Info.module.css'
+import email from './email.png'
+import telephone from './telephone.png'
 
 const info = (props) => {
     return (
@@ -13,7 +15,17 @@ const info = (props) => {
                 <li><p>Frameworks and Tools: <strong>Node.js, React, Docker, Django, HTML, CSS</strong></p></li>
             </ul>
             <p>Outside of my work, you can find me working out in the gym, reading a novel or practicing my guitar</p>
-            <p>My contact details go here</p>
+            <div className={styles.Contact}>
+                <div className={styles.Block}>
+                    <img src={email} alt="Email"></img>
+                    <p>zhanto97@gmail.com</p>
+                </div>
+                <div className={styles.Block}>
+                    <img src={telephone} alt="Telephone"></img>
+                    <p>+1 (669) 265 5917</p>
+                </div>
+            </div>
+            
         </div>
     )
 }
