@@ -9,6 +9,7 @@ import Link from './Renderers/Link'
 import styles from './Blog.module.css'
 
 const posts = {};
+const collator = new Intl.Collator(undefined, {numeric: true})
 
 function importAll (r) {
     r.keys().forEach(key => posts[key] = r(key));
@@ -22,7 +23,7 @@ const Blog = (props) => {
             fetch(value)
                 .then((response) => response.text())
                 .then((text) => {
-                    setMd(md => [...md, text])
+                    setMd(md => [...md, {key, text}])
                 })
         }
     }, [])
@@ -46,15 +47,17 @@ const Blog = (props) => {
 
     const postClickHandler = (id) => {
         setSelected(id)
+        props.history.push(props.match.url + '/' + id)
     }
-
+    
+    md.sort((a, b) => collator.compare(a.key, b.key))
     if (selected !== -1){
         return (
             <div className={styles.Blog}>
                 <BlogPost>
                     <ReactMarkdown 
-                        source={md[selected]}
-                        renderers={{ code: CodeBlock, inlineCode: InlineCode, link: Link}}/>
+                        source={md[selected].text}
+                        renderers={{ code: CodeBlock, inlineCode: InlineCode, link: Link}} />
                 </BlogPost>
             </div>
         )
@@ -66,7 +69,7 @@ const Blog = (props) => {
                     key={index}
                     link={props.match.url + '/' + index}
                     clicked={() => postClickHandler(index)}>
-                        <ReactMarkdown source={post} renderers={{ code: CodeBlock }}></ReactMarkdown>
+                        <ReactMarkdown source={post.text} renderers={{ code: CodeBlock }} />
                 </Preview>)
             }
         </div>

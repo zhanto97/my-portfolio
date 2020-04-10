@@ -11,11 +11,11 @@ function App() {
     <BrowserRouter>
       <div className={styles.App}>
         <Navigation />
-        {/* <Route path="/" exact component={About}></Route> */}
         <Switch>
           <Route path="/about" exact component={About}></Route>
           <Route path="/blog/:id" component={Blog}></Route>
           <Route path="/blog" component={Blog}></Route>
+          <Route path="/" exact component={About}></Route>
         </Switch>
       </div>
     </BrowserRouter>

@@ -11,6 +11,7 @@
     padding: 22px 22px 0px 22px;
     margin: 30px;
     text-align: justify;
+    cursor: pointer;
 }
 
 .Preview a {

@@ -9,10 +9,10 @@ const CodeBlock = (props) => {
         borderRadius: '4px',
         boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 4px',
         fontSize: '17px',
-        overflow: 'scroll',
+        overflow: 'scroll'
     }
     return (
-        <SyntaxHighlighter language="javascript" style={prism} customStyle={customStyle}>
+        <SyntaxHighlighter style={prism} customStyle={customStyle}>
             {props.value}
         </SyntaxHighlighter>
     )
