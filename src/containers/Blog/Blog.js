@@ -6,6 +6,7 @@ import BlogPost from '../../components/BlogPost/BlogPost'
 import CodeBlock from './Renderers/CodeBlock'
 import InlineCode from './Renderers/InlineCode'
 import Link from './Renderers/Link'
+import Image from './Renderers/Image'
 import styles from './Blog.module.css'
 
 const posts = {};
@@ -57,7 +58,11 @@ const Blog = (props) => {
                 <BlogPost>
                     <ReactMarkdown 
                         source={md[selected].text}
-                        renderers={{ code: CodeBlock, inlineCode: InlineCode, link: Link}} />
+                        renderers={{
+                            code: CodeBlock,
+                            inlineCode: InlineCode,
+                            link: Link,
+                            image: Image}} />
                 </BlogPost>
             </div>
         )
@@ -69,7 +74,10 @@ const Blog = (props) => {
                     key={index}
                     link={props.match.url + '/' + index}
                     clicked={() => postClickHandler(index)}>
-                        <ReactMarkdown source={post.text} renderers={{ code: CodeBlock }} />
+                        <ReactMarkdown source={post.text} renderers={{
+                            code: CodeBlock,
+                            inlineCode: InlineCode,
+                            image: Image}} />
                 </Preview>)
             }
         </div>
