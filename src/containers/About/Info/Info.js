@@ -6,7 +6,7 @@ import telephone from './telephone.png'
 const info = (props) => {
     return (
         <div className={styles.Info}>
-            <h1>Wow! A whole page about me</h1>
+            <h1 style={{textAlign: 'center'}}>Wow! A whole page about me</h1>
             <p>I am a software engineer in senior year at Korea Advanced Institute of Science and Technology (KAIST).</p>
             <p>I love breaking complex problems into simple, elegant and structured code.</p>
             <p>My techincal strengths are:</p>
@@ -22,7 +22,7 @@ const info = (props) => {
                 </div>
                 <div className={styles.Block}>
                     <img src={telephone} alt="Telephone"></img>
-                    <p>+1 (669) 265 5917</p>
+                    <p>+7 (775) 569 4216</p>
                 </div>
             </div>
             
