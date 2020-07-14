@@ -4,7 +4,7 @@ import styles from './About.module.css'
 import Profile from './Profile/Profile'
 import Info from './Info/Info'
 
-const about = (props) => {
+const AboutPage = (props) => {
     return (
         <div className={styles.About}>
             <Profile />
@@ -13,4 +13,4 @@ const about = (props) => {
     )
 }
 
-export default about
+export default AboutPage

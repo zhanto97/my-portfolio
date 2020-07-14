@@ -17,7 +17,7 @@ function importAll (r) {
 }
 importAll(require.context('./Posts/', true, /\.md$/));
 
-const Blog = (props) => {
+const BlogPage = (props) => {
     const [md, setMd] = useState([])
     useEffect(() => {
         for (let [key, value] of Object.entries(posts)) {
@@ -84,4 +84,4 @@ const Blog = (props) => {
     )
 }
 
-export default Blog
+export default BlogPage

@@ -14,7 +14,6 @@ const navigation = (props) => {
                 <ul>
                     <li><Item link="/cv">CV</Item></li>
                     <li><Item link="/blog">Blog</Item></li>
-                    <li><Item link="/projects">Projects</Item></li>
                 </ul>
             </div>
         </div>
