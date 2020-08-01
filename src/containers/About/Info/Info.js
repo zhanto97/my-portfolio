@@ -14,7 +14,7 @@ const info = (props) => {
             <p>My techincal strengths are:</p>
             <ul>
                 <li><p>Programming Languages: <strong>Python, Javascript, Java</strong></p></li>
-                <li><p>Frameworks and Tools: <strong>Node.js, React, Docker, Django, Flask, HTML, CSS</strong></p></li>
+                <li><p>Frameworks and Tools: <strong>Node.js, Django, React, Docker, HTML, CSS</strong></p></li>
             </ul>
             <p>Outside of my work, you can find me working out in the gym, reading a novel or practicing my guitar.</p>
             <p>Check out my Github and Linkedin pages to know more about me and my works.</p>
