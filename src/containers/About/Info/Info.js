@@ -9,14 +9,15 @@ const info = (props) => {
     return (
         <div className={styles.Info}>
             <h1 style={{textAlign: 'center'}}>Wow! A whole page about me</h1>
-            <p>I am a software engineer at Korea Advanced Institute of Science and Technology (KAIST) graduating in February 2021.</p>
-            <p>I love breaking complex problems into simple, elegant and structured code.</p>
+            <p>I am a senior student at Korea Advanced Institute of Science and Technology (KAIST) graduating in February 2021. I major in computer science and mathematics.</p>
+            <p>My passions are building big as well as scalable systems and breaking complex problems into simple, elegant and structured code.</p>
             <p>My techincal strengths are:</p>
             <ul>
-                <li><p>Programming Languages: <strong>Python, Javascript, Java</strong></p></li>
-                <li><p>Frameworks and Tools: <strong>Node.js, Django, React, Docker, HTML, CSS</strong></p></li>
+                <li><p>Programming Languages: <strong>Python, C++, Javascript</strong></p></li>
+                <li><p>Frameworks and Tools: <strong>Node.js, Django, Flask, React.js, Docker, GCP, Tensorflow, Git</strong></p></li>
+                <li><p>Databases: <strong>PostgreSQL, MongoDB, Redis</strong></p></li>
             </ul>
-            <p>Outside of my work, you can find me working out in the gym, reading a novel or practicing my guitar.</p>
+            <p>Outside of my work, you can find me working out in the gym, reading a novel or practicing my guitar 😊</p>
             <p>Check out my Github and Linkedin pages to know more about me and my works.</p>
             <div className={styles.Contact}>
                 <div className={styles.Block}> 
